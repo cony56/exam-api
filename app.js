@@ -5,5 +5,6 @@ const port = process.env.PORT || 3000;
 app.get('/', (req,res) => res.send('Hello NodeJS!'));
 app.get('/service', (req,res) => {
     var status_name =req.param('status');
-    res.send('The system is running [Status:' + user_name + ']');
+    res.send('The system is running [Status:' + status_name + ']');
 });
+app.listen(port, () => console.log('Example app listening on port 3000'))
